@@ -2,35 +2,74 @@
 
 A Python-based desktop application built with Tkinter and MySQL. This application allows users to build a personal reading catalog, track their progress, and compete on a global leaderboard. It features an automated setup process, making it incredibly easy to run on a new machine.
 
+---
+
 ## ✨ Key Features
 
 * **Dual-Role System:** Automated routing for `User` and `Admin` accounts.
 * **Admin Dashboard:** Admins can view all users, manage user accounts (delete), and approve password reset requests.
 * **User Library:** Users can add books (Title, Author, Total Chapters), update their reading progress, leave a 1-5 Star rating, and remove books.
-* **Gamification & Medals:** A dynamic ranking system calculates a user's score based on their reading completion rate and total books read. The top 3 users are awarded 🥇 Gold, 🥈 Silver, and 🥉 Bronze medals on their dashboard!
-* **Robust Security:** * 8-character minimum password requirement.
+* **Gamification & Medals:** A dynamic ranking system calculates a user's score based on their reading completion rate and total books read. The top 3 users are awarded 🥇 Gold, 🥈 Silver, and 🥉 Bronze medals on their dashboard.
+* **Robust Security:**
+  * 8-character minimum password requirement.
   * Hide/Show password toggles (👁 icon).
   * Dynamic temporary passwords for account resets (e.g., `username@123`).
   * Forced password-change screen upon logging in with a reset password.
-* **Self-Building Database:** The app automatically builds its own MySQL database and tables (`users` and `books_read`) on the first launch.
+* **Self-Building Database:** The app automatically creates its own MySQL database and tables (`users` and `books_read`) during the first launch.
+
+---
 
 ## 🛠️ Prerequisites & Setup (For New Computers)
 
 If you are on a new laptop and only have **Visual Studio Code (VS Code)** installed, follow these steps to run the project.
 
-### 1. Install Python
-1. Download Python from [python.org/downloads](https://www.python.org/downloads/).
+---
+
+## 1️⃣ Install Python
+
+1. Download Python from: [https://www.python.org/downloads/](https://www.python.org/downloads/)
+
 2. Run the installer.
-3. ⚠️ **IMPORTANT:** At the bottom of the installer window, check the box that says **"Add Python to PATH"** before clicking Install.
 
-### 2. MySQL Setup
+3. ⚠️ IMPORTANT:  
+   Check the box **"Add Python to PATH"** before clicking Install.
 
-1. Go to the MySQL download website: [https://dev.mysql.com/downloads/installer/](https://dev.mysql.com/downloads/installer/)
+---
+
+## 2️⃣ MySQL Setup
+
+1. Go to the MySQL download website:  [https://dev.mysql.com/downloads/installer/](https://dev.mysql.com/downloads/installer/)
 
 2. Download and install MySQL using the default settings.
 
 3. During installation, set your MySQL root password.
 
+---
+
+## 3️⃣ Download or Clone the Project
+
+### Option 1: Download ZIP
+
+1. Open the GitHub repository.
+2. Click the green **Code** button.
+3. Click **Download ZIP**.
+4. Extract the ZIP file.
+
+### Option 2: Clone Using Git
+
+```bash
+git clone https://github.com/your-username/your-repository-name.git
+```
+
+After downloading or cloning, open the project folder in VS Code.
+
+---
+
+## 4️⃣ Open the Project in VS Code
+
+1. Open VS Code.
+2. Go to `File` > `Open Folder`.
+3. Select the downloaded project folder.
 4. Open `app.py` and replace the password value with your MySQL password:
 
 ```python
@@ -40,50 +79,57 @@ connection = mysql.connector.connect(
     password="your_password"
 )
 ```
+---
 
-### 3. Open the Project in VS Code
-1. Download or clone this repository to your computer.
-2. Open VS Code.
-3. Go to `File` > `Open Folder` and select the downloaded project folder.
+## 5️⃣ Install the Database Connector
 
-### 4. Install the Database Connector
-Python needs a package to talk to MySQL.
-1. In VS Code, open a terminal by clicking `Terminal` > `New Terminal` at the top of the screen.
-2. Type the following command and press Enter:
-   ```bash
-   pip install mysql-connector-python
+Python needs a package to communicate with MySQL.
 
+Open the VS Code terminal:
 
+```bash
+pip install mysql-connector-python
+```
+
+---
 
 ## 🚀 How to Run the Application
 
-1. Make sure MySQL is running in your XAMPP Control Panel.
-2. Ensure the image files (`Login.png`, `background1.png`, `gold.png`, etc.) are in the exact same folder as the Python scripts.
-3. In your VS Code terminal, run the application:
+1. Make sure MySQL Server is running.
+2. Ensure the image files (`Login.png`, `background1.png`, `gold.png`, etc.) are in the same folder as the Python scripts.
+3. Open the VS Code terminal and run:
+
 ```bash
 python app.py
-
 ```
 
-*(Note: If you get an error that 'python' is not recognized, try typing `python3 app.py` instead).*
+If `python` does not work, try:
 
-### 🔑 Default Login Credentials
+```bash
+python3 app.py
+```
 
-Because the database builds itself on the first run, a default Admin account is automatically generated for you.
+---
+
+## 🔑 Default Login Credentials
+
+Because the database is automatically created during the first run, a default Admin account is generated automatically.
 
 * **Username:** `Raja`
 * **Password:** `Raj@1234`
-* **Role:** Admin
+* **Role:** `Admin`
 
-To test the User features, click **"Sign Up"** on the login screen to create a new standard user account.
+To test User features, click **Sign Up** on the login page to create a new user account.
 
 ---
 
 ## 📁 Project Structure
 
-* `app.py` - The main frontend application (Tkinter UI and layouts).
-* `main.py` - The backend database logic (SQL queries, ranking algorithms, and data validation).
-* `*.png` - UI assets and medal icons required for the dashboard.
+* `app.py` → Main frontend application (Tkinter UI and layouts).
+* `main.py` → Backend database logic, SQL queries, ranking algorithms, and validations.
+* `*.png` → UI assets and medal icons used in the dashboard.
+
+---
 
 ## 💻 Tech Stack
 
@@ -91,3 +137,18 @@ To test the User features, click **"Sign Up"** on the login screen to create a n
 * **Backend:** MySQL
 * **Connector:** `mysql-connector-python`
 
+---
+
+## 📸 Screenshots
+
+### Login Page
+(Add screenshot here)
+
+### Dashboard
+(Add screenshot here)
+
+---
+
+## 👨‍💻 Author
+
+Developed by Raja M.
