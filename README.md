@@ -25,9 +25,7 @@ If you are on a new laptop and only have **Visual Studio Code (VS Code)** instal
 
 ### 2. MySQL Setup
 
-1. Go to the MySQL download website:
-
-:contentReference[oaicite:0]{index=0}
+1. Go to the MySQL download website: [https://dev.mysql.com/downloads/installer/](https://dev.mysql.com/downloads/installer/)
 
 2. Download and install MySQL using the default settings.
 
