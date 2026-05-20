@@ -1,7 +1,3 @@
-
----
-
-```markdown
 # 📚 Library Connect (Book Catalog Application)
 
 A Python-based desktop application built with Tkinter and MySQL. This application allows users to build a personal reading catalog, track their progress, and compete on a global leaderboard. It features an automated setup process, making it incredibly easy to run on a new machine.
@@ -17,8 +13,6 @@ A Python-based desktop application built with Tkinter and MySQL. This applicatio
   * Dynamic temporary passwords for account resets (e.g., `username@123`).
   * Forced password-change screen upon logging in with a reset password.
 * **Self-Building Database:** The app automatically builds its own MySQL database and tables (`users` and `books_read`) on the first launch.
-
----
 
 ## 🛠️ Prerequisites & Setup (For New Computers)
 
