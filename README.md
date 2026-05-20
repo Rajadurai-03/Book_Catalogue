@@ -43,8 +43,6 @@ Python needs a package to talk to MySQL.
 
 ```
 
----
-
 ## 🚀 How to Run the Application
 
 1. Make sure MySQL is running in your XAMPP Control Panel.
@@ -83,6 +81,3 @@ To test the User features, click **"Sign Up"** on the login screen to create a n
 * **Backend:** MySQL
 * **Connector:** `mysql-connector-python`
 
-```
-
-```
