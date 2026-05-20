@@ -23,11 +23,25 @@ If you are on a new laptop and only have **Visual Studio Code (VS Code)** instal
 2. Run the installer.
 3. ⚠️ **IMPORTANT:** At the bottom of the installer window, check the box that says **"Add Python to PATH"** before clicking Install.
 
-### 2. Install MySQL (via XAMPP)
-This application requires a local database to store users and books.
-1. Download **XAMPP** from [apachefriends.org](https://www.apachefriends.org/).
-2. Install it with the default settings.
-3. Open the XAMPP Control Panel and click **"Start"** next to the **MySQL** module.
+### 2. MySQL Setup
+
+1. Go to the MySQL download website:
+
+:contentReference[oaicite:0]{index=0}
+
+2. Download and install MySQL using the default settings.
+
+3. During installation, set your MySQL root password.
+
+4. Open `app.py` and replace the password value with your MySQL password:
+
+```python
+connection = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="your_password"
+)
+```
 
 ### 3. Open the Project in VS Code
 1. Download or clone this repository to your computer.
