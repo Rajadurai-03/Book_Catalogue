@@ -41,7 +41,7 @@ Python needs a package to talk to MySQL.
    ```bash
    pip install mysql-connector-python
 
-```
+
 
 ## 🚀 How to Run the Application
 
@@ -52,8 +52,6 @@ Python needs a package to talk to MySQL.
 python app.py
 
 ```
-
-
 
 *(Note: If you get an error that 'python' is not recognized, try typing `python3 app.py` instead).*
 
