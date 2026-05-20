@@ -142,10 +142,12 @@ To test User features, click **Sign Up** on the login page to create a new user 
 ## 📸 Screenshots
 
 ### Login Page
-(Add screenshot here)
+<img width="1191" height="665" alt="image" src="https://github.com/user-attachments/assets/1bb9d9c2-7c63-411b-ab29-f0b3c882a84a" />
+
 
 ### Dashboard
-(Add screenshot here)
+<img width="1187" height="662" alt="image" src="https://github.com/user-attachments/assets/c3550947-914e-40c1-af09-f3f7815ab171" />
+
 
 ---
 
