@@ -1,7 +1,6 @@
 import traceback
 import sys
 
-# --- CRASH PROTECTION WRAPPER ---
 try:
     from tkinter import *
     from tkinter import messagebox
@@ -12,8 +11,6 @@ try:
 
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     def img_path(filename): return os.path.join(BASE_DIR, filename)
-
-    # Database Safety Check
     try:
         connection = mysql.connector.connect(host="localhost", user="root", password="root")
         cursor = connection.cursor()
@@ -33,7 +30,6 @@ try:
 
     page = 1
 
-    # ── GLOBAL UI HELPERS ────────────────────────────────────────────────────────
     def bind_placeholder(entry, text, is_password=False):
         entry.insert(0, text)
         entry.config(fg='gray')
@@ -120,8 +116,6 @@ try:
 
         Button(change_win, width=25, pady=7, text='Save Password', bg='#652d90', fg='white', border=0, command=save_new_password).place(x=100, y=260)
 
-
-    # ── ADMIN DASHBOARD ──────────────────────────────────────────────────────────
     def open_admin():
         admin_screen = Toplevel(root)
         admin_screen.title("Admin Controls")
@@ -171,8 +165,6 @@ try:
         Button(admin_screen, text="Logout", bg="#652d90", fg="white", width=15, command=logout_admin).pack(pady=20)
         refresh_admin()
 
-
-    # ── USER DASHBOARD ───────────────────────────────────────────────────────────
     def open_user_dashboard(username):
         global page
         page = 1
@@ -346,8 +338,6 @@ try:
         refresh_rows(frame, main.dbview(cursor, username), page)
         Label(frame, text=username, fg='black', bg='#3D708D', font=('JosefinSansRoman-Regular', 14, 'bold')).place(x=800, y=20)
 
-
-    # ── LOGIN LOGIC ──────────────────────────────────────────────────────────────
     def signin():
         uname = user.get().strip()
         pwd = code.get().strip()
@@ -363,7 +353,6 @@ try:
         else:
             messagebox.showerror("Error", "Invalid username or password")
 
-    # ── SIGN UP SCREEN ───────────────────────────────────────────────────────────
     def signup():
         root.withdraw()
         screen = Toplevel(root)
@@ -430,9 +419,6 @@ try:
         Button(f1, width=39, pady=7, text='Sign up', bg='#652d90', fg='white', border=0, command=newdetails).place(x=35, y=260)
         Button(f1, text='< Back to Login', border=0, bg='white', cursor='hand2', fg='gray', command=go_back).place(x=130, y=305)
 
-
-    # ── MAIN LOGIN WINDOW ────────────────────────────────────────────────────────
-    # Image Loading Safety Check
     try:
         img = PhotoImage(file=img_path('Login.png'))
         Label(root, image=img, bg='#fff').place(x=50, y=140)
@@ -474,7 +460,6 @@ try:
     root.mainloop()
 
 except Exception as e:
-    # If anything else fails, we forcefully show the error before closing
     temp_root = Tk()
     temp_root.withdraw()
     messagebox.showerror("Fatal Error", f"The application crashed:\n\n{str(e)}\n\nCheck your console for the full traceback.")
